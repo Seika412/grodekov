@@ -1,9 +1,8 @@
 import "./App.css";
-import {BrowserRouter} from "react-router";
 import {MyModal} from "./components/MyModal/MyModal.tsx";
 import {useGlobalStore} from "./store/GlobalStore.ts";
 import {MyModalChangeContent} from "./components/MyModalChageContent/MyModalChangeContent.tsx";
-import {Route, Routes} from "react-router/internal/react-server-client";
+import {Route, Routes, BrowserRouter} from "react-router";
 import {HeroPage, MyRegisterPage, RoutePage, MyLoginPage, LandMarkPage, ArticlePage } from "./pages";
 import {MyMapPageContainer} from "./modules/map";
 import {Toaster} from "sonner";
