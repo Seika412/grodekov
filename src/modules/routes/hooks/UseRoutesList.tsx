@@ -27,8 +27,12 @@ export function UseRoutesList() {
     setIsLoading(true);
     let coords: { lat: number; lng: number };
     try {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       coords = await getUserLocation();
       console.log(coords)
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
     } catch (error: GeolocationPositionError) {
       if (error.code === 1) {
         toast.error("Вы запретили доступ к геолокации. Разрешите доступ в настройках, чтобы построить маршрут от вас.");

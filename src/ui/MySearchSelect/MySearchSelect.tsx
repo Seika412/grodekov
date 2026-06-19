@@ -6,7 +6,7 @@ import SearchIcon from "../../assets/icons/search.svg?react"
 type Props = {
   name: string,
   placeholder: string,
-  options: {id: number, name: string}[],
+  options: string[],
   error: string,
   register: UseFormRegister<any>,
   setValue: UseFormSetValue<any>,

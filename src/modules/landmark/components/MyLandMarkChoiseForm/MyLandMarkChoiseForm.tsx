@@ -106,8 +106,8 @@ export function MyLandMarkChoiseForm() {
 
         <button type="button" onClick={() => {
           toast.success(`Идем из: ${latitude} в: Бобры`);
-          setFromLat(latitude);
-          setFromLng(longitude);
+          setFromLat(String(latitude));
+          setFromLng(String(longitude));
           setIsFromMyLocation(true)
           setFromLevel(1);
           setExhibitId(1);

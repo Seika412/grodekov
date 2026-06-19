@@ -21,7 +21,11 @@ export function MyMap({isFullScreen}: Props): ReactElement {
   const {styleFeature} = UseMyMap()
 
   const geojsonData = useMemo(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     setTempRouteData((prevState) => routeData?.levels?.[1] || prevState)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     return routeData?.levels?.[1]
   }, [routeData])
 

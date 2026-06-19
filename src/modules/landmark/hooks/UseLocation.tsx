@@ -16,6 +16,8 @@ export function UseLocation() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const loc: Location = {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };

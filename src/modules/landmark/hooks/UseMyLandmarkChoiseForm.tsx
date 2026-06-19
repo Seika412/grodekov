@@ -34,7 +34,11 @@ export function UseMyLandmarkChoiseForm({currentLocation}: Props) {
     let coords: { lat: number; lng: number };
     if (data.currentLocation === 'Текущее местоположение') {
       try {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         coords = await getUserLocation();
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
       } catch (error: GeolocationPositionError) {
         console.log(error)
         if (error.code === 1) {

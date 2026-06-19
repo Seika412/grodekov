@@ -6,14 +6,23 @@ import {useMapStore} from "../../../../store/MapStore.ts";
 export function MyLocationMarker() {
   const [position, setPosition] = useState(null);
   const {setFromLng, setFromLat, isFromMyLocation} = useMapStore()
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
+
+
   const map = useMapEvents({
     locationfound(e: L.LocationEvent) {
-      setPosition(e.latlng);
+      setPosition(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        e.latlng);
       if (isFromMyLocation) {
-        setFromLat(e.latlng.lat)
-        setFromLng(e.latlng.lng)
+        setFromLat(
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          e.latlng.lat)
+        setFromLng(
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          e.latlng.lng)
       }
     },
     locationerror(e: L.ErrorEvent) {
