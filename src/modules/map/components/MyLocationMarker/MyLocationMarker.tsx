@@ -32,6 +32,7 @@ export function MyLocationMarker() {
     return () => {
       map.stopLocate();
     }
+
   }, [])
 
   return position === null ? null : <Marker position={position} >
