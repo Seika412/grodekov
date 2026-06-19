@@ -36,6 +36,7 @@ export function MyLocationMarker() {
   }, [])
 
 
+
   return position === null ? null : <Marker position={position} >
     <Tooltip permanent direction="top" offset={[-15, -10]}>
       Вы здесь
