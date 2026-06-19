@@ -1,0 +1,38 @@
+.container {
+    list-style: none;
+    display: grid;
+    row-gap: 16px;
+
+}
+
+.date {
+    color: #8E8E8E;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    padding: 20px ;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: lightgray;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 400;
+}
+

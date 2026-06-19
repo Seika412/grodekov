@@ -1,0 +1,135 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-inline: 20px;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: -40px;
+    flex-direction: column;
+    gap: 16px;
+    display: flex;
+    align-items: start;
+}
+
+.isHasFilters {
+    top: -90px
+}
+
+.modal {
+    width: 100%;
+    position: relative;
+    max-width: 400px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: height 0.1s ease-out;
+    animation: slideUp 0.25s ease-out;
+}
+
+.dragHandle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 12px 0 4px;
+    cursor: grab;
+    touch-action: none;
+    flex-shrink: 0;
+}
+
+.closeButton {
+    margin-left: auto;
+    right: 0;
+}
+
+.dragHandle:active {
+    cursor: grabbing;
+}
+
+.dragIndicator {
+    width: 36px;
+    height: 5px;
+    background: black;
+    border-radius: 100px;
+}
+
+.modalDragging {
+    transition: none !important;
+}
+
+.filterContainer {
+    display: flex;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.filterItem {
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding-inline: 8px;
+    white-space: nowrap;
+}
+
+.backButton {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    transition: transform .15s;
+}
+.backButton:active {
+    transform: scale(0.95);
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    border-radius: 24px 24px 0 0;
+    scrollbar-width: none;
+    background-color: white;
+    padding: 20px;
+}
+.content::-webkit-scrollbar { display: none; }
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.modalHidden {
+    animation: slideDown 0.25s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}

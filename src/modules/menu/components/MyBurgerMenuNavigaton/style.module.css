@@ -1,0 +1,67 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.listItem {
+    font-size: 32px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+.button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: start;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+
+    padding: 0;
+    margin: 0;
+
+    -webkit-tap-highlight-color: transparent;
+
+    display: inline-block;
+}
+
+.listItem::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.4s ease;
+
+    margin-top: 4px;
+}
+
+.listItem:hover::after {
+    width: 100%;
+}
+
+.button:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+}
+
+.button:focus:not(:focus-visible) {
+    outline: none;
+}

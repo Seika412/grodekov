@@ -1,0 +1,13 @@
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 17px;
+}
+
+.MainContainerTopShift {
+    margin-top: -60px;
+}
+
+.mainContainerResetInlinePudding {
+    padding-inline: 0;
+}

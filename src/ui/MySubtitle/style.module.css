@@ -1,0 +1,18 @@
+.subtitleContainer {
+    max-width: 302px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.subtitleContainer p {
+    font-size: 16px;
+    color: #323232;
+}
+
+.subtitle {
+    font-size: 32px;
+    width: 100%;
+    color: #1E1E1E;
+    font-weight: 500;
+    text-align: start;
+}

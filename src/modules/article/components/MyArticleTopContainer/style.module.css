@@ -1,0 +1,17 @@
+.topContainer {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-bottom: 24px;
+}
+
+.titleContainer {
+  max-width: 301px;
+}
+
+.title {
+    margin-bottom: 8px;
+    font-size: 32px;
+}

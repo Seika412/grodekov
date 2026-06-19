@@ -1,0 +1,12 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 402px;
+}
+
+.inputWrapper {
+    display: grid;
+    gap: 12px
+}

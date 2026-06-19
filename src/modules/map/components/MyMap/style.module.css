@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    z-index: 1 !important;
+}
+
+.mapContainer {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.mapContainerFullScreen {
+    height: 100vh;
+}

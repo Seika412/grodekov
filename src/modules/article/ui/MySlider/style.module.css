@@ -1,0 +1,56 @@
+.sliderWrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.swiper {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.slide {
+    position: relative;
+    height: 220px;
+    background-color: #ebebed;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #999;
+}
+
+.counter {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: rgba(60, 60, 60, 0.85);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 14px;
+    line-height: 1;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+/* Неактивная полоска */
+.bullet {
+    width: 28px;
+    height: 3px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bulletActive {
+    background-color: #555;
+}

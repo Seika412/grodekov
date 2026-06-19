@@ -1,0 +1,1 @@
+export {MyHeader} from "./components/MyHeader/MyHeader.tsx"

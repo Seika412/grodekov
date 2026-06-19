@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #F2F2F2;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    border: none;
+    background: transparent;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 400;
+}

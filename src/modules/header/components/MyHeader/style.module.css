@@ -1,0 +1,106 @@
+.header {
+  position: relative;
+  z-index: 10000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.headerGlass {
+  background: linear-gradient(to bottom,
+  #ffffff 0%,
+  #ffffff 10%,
+  rgba(255, 255, 255, 0) 100%
+  );
+
+  box-sizing: border-box;
+}
+
+.sideAction {
+  width: 40px;
+  display: flex;
+  align-items: center;
+
+}
+
+.sideAction:last-child {
+  justify-content: flex-end;
+}
+
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition-duration: 0.3s
+}
+
+
+.btn::after {
+  transition-duration: 0.3s;
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.btn::before {
+  transition-duration: 0.3s;
+  display: block;
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.btn.active::before {
+  transform: translateY(12px) rotateZ(45deg);
+}
+
+
+.btn.active::after {
+  transform: translateY(-12px) rotateZ(-45deg);
+}
+
+.active {}
+
+.btn.active .menuIcon {
+  opacity: 0;
+  transform: translateY(-50%) scaleX(0);
+}
+
+
+
+
+.backIcon {
+  color: #2f57f5;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 300;
+  transform: translateY(-2px);
+}
+
+.menuIcon {
+  color: #1a1a1a;
+  width: 80%;
+  height: 2px;
+  font-size: 24px;
+  background-color: black;
+  line-height: 1;
+}
+
+

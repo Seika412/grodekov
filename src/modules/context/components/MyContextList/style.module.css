@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    column-gap: 16px;
+    background-color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #F2F2F2;
+}
+
+.button {
+    border: none;
+    background: transparent;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 400;
+}
