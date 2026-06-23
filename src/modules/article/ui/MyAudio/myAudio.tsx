@@ -1,7 +1,6 @@
 import WaveSurfer from "wavesurfer.js";
 import { useEffect, useRef, useState} from "react";
 import styles from "./style.module.css"
-import audio from "./audio.mp3"
 type Props = {
   audioDescription: string,
   audioUrl: string
@@ -12,7 +11,6 @@ export function MyAudio({audioDescription, audioUrl}: Props) {
   const wavesurferRef = useRef<WaveSurfer>(null)
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState('0:00');
-
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -30,7 +28,7 @@ export function MyAudio({audioDescription, audioUrl}: Props) {
       barGap: 2,
       barRadius: 2,
       height: 30,
-      url: audio,
+      url: audioUrl,
     });
 
     wavesurferRef.current.on('ready', () => {

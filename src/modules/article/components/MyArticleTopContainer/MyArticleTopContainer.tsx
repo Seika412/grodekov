@@ -1,11 +1,13 @@
 import styles from "./style.module.css";
 import {MyAudio} from "../../ui/MyAudio/myAudio.tsx";
+import type {IContent} from "../../../../types/modals/IContent.ts";
 
 type Props = {
   title: string;
   description: string;
   audioUrl: string;
   audioDescription: string;
+  content: IContent[]
 };
 
 

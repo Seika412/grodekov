@@ -1,0 +1,53 @@
+{
+  "type": "MultiLevelRoute",
+  "from": {
+    "lat": 48.473349711,
+    "lng": 135.050659264,
+    "level": 1
+  },
+  "to": {
+    "exhibit_id": 1,
+    "name": "Бобры",
+    "lat": 48.4734192033896,
+    "lng": 135.050409996228,
+    "level": 1
+  },
+  "distance_m": 30.8,
+  "duration_s": 22,
+  "level_changes": [],
+  "levels": {
+    "1": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "segment": "access"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [135.050659264, 48.473349711],
+              [135.050667152, 48.473344444]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "segment": "route"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [135.050667151666, 48.4733444444297],
+              [135.050659144, 48.473332452],
+              [135.050354066, 48.473413946],
+              [135.050409996, 48.473419203]
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

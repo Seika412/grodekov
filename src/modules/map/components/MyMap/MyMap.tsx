@@ -9,7 +9,6 @@ import L from 'leaflet';
 import {type ReactElement, useMemo, useState} from "react";
 import {UseMyMap} from "../../hooks/UseMyMap.tsx";
 import {MyLocationMarker} from "../MyLocationMarker/MyLocationMarker.tsx";
-
 type Props = {
   isFullScreen?: boolean
 }

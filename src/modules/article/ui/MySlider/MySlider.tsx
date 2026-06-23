@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 type Props = {
-  slides: { id: number; image: string }[];
+  slides: string[];
 };
 
 export function MySlider({slides}: Props) {
@@ -28,9 +28,9 @@ export function MySlider({slides}: Props) {
         className={styles.swiper}
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
+          <SwiperSlide key={slide}>
             <div className={styles.slide}>
-              <img src={slide.image}  />
+              <img src={slide}  />
               <div className={styles.counter}>
                 {activeIndex + 1}/{slides.length}
               </div>

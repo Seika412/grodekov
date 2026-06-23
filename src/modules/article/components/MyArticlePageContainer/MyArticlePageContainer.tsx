@@ -1,21 +1,18 @@
 import {useQuery} from "@tanstack/react-query";
 import ArticleService from "../../services/ArticleService.ts";
-import {MyArticleTopContainer} from "../MyArticleTopContainer/MyArticleTopContainer.tsx";
 import {MySlider} from "../../ui/MySlider/MySlider.tsx";
-
-const slides = [
-  { id: 1, image: 'https://avatars.mds.yandex.net/i?id=15bfbb52942b56f8ff992b86279dd133_l-12490006-images-thumbs&n=13' },
-  { id: 2, image: 'https://avatars.mds.yandex.net/i?id=15bfbb52942b56f8ff992b86279dd133_l-12490006-images-thumbs&n=13' },
-  { id: 3, image: 'https://avatars.mds.yandex.net/i?id=15bfbb52942b56f8ff992b86279dd133_l-12490006-images-thumbs&n=13' },
-  { id: 4, image: 'https://avatars.mds.yandex.net/i?id=15bfbb52942b56f8ff992b86279dd133_l-12490006-images-thumbs&n=13' },
-];
+import {useMapStore} from "../../../../store/MapStore.ts";
+import {MyArticleTopContainer} from "../MyArticleTopContainer/MyArticleTopContainer.tsx";
+import {MyArticleText} from "../MyArticleText/MyArticleText.tsx";
 
 export function MyArticlePageContainer() {
+  const {exhibitId} = useMapStore()
   const {data, error, isLoading} = useQuery({
-    queryKey: ["get:article:by:id"],
+    queryKey: [`get:article:by:${exhibitId}`],
     queryFn: async () => {
-      return await ArticleService.getArticleByArticleId(1)
-    }
+      return await ArticleService.getArticleByExhibitId(exhibitId)
+    },
+    enabled: exhibitId !== null,
   })
 
   if (isLoading) {
@@ -32,12 +29,21 @@ export function MyArticlePageContainer() {
       {data ?
         <>
           <MyArticleTopContainer
-            title={data.title}
-            description={data.description}
-            audioUrl={data.audio_link}
-            audioDescription={data.audio_description}
+            title={"Бобры"}
+            description={"Бобры"}
+            audioUrl={data.audio}
+            audioDescription={"ksdjfkjsdfjdsf"}
+            content={data.content}
           />
-         <MySlider slides={slides} />
+          {
+            data.content.map((content) => {
+              if (content.type === "slider") {
+                return <MySlider slides={content.images} />
+              } else if (content.type === "text") {
+                return <MyArticleText text={content.value} />
+              }
+            })
+          }
         </>
         :
         <div>не удалось найти вас</div>

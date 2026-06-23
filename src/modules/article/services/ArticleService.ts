@@ -1,16 +1,13 @@
-import type {ArticleItemType} from "../types/ArticleItemType.ts";
-import {ARTICLE_ITEMS} from "../../../mocks/articleData.ts";
+import {$api} from "../../../http";
+import type {IExhibit} from "../../../types/modals/IExhibit.ts";
+import type {IArticle} from "../../../types/modals/IArticle.ts";
 
 
 class ArticleService {
 
-  async getArticleByArticleId(articleId: number): Promise<ArticleItemType> {
-    console.log(articleId )
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(ARTICLE_ITEMS);
-      }, 1000);
-    });
+  async getArticleByExhibitId(exhibitId: number | null): Promise<IArticle> {
+    const exhibitItem = await $api.get<IExhibit>(`/api/exhibits/${exhibitId}`)
+    return exhibitItem.data.article;
   }
 }
 
